@@ -5,7 +5,7 @@ echo "Updating system"
 sudo dnf update -y
  
 echo "Installing python"
-sudo dnf install python3 -y
+sudo dnf install python3 python3-pip -y
  
 echo "Installing pip properly"
 python3 -m ensurepip --upgrade || true
