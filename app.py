@@ -45,7 +45,7 @@ def home():
         .ball{
             width:60px;
             height:60px;
-            background:Green;
+            background:green;
             border-radius:50%;
             position:absolute;
             animation: bounce 4s infinite;
