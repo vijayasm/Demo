@@ -1,16 +1,23 @@
 #!/bin/bash
 set -e
  
-echo "Installing python and pip"
+echo "Updating system"
+sudo dnf update -y
  
+echo "Installing python"
 sudo dnf install python3 -y
  
+echo "Installing pip properly"
 python3 -m ensurepip --upgrade || true
  
-python3 -m pip install --upgrade pip
+echo "Upgrade pip"
+sudo python3 -m pip install --upgrade pip
  
-echo "Installing project dependencies"
- 
+echo "Go to app directory"
 cd /home/ec2-user/app
  
-pip3 install -r requirements.txt || true
+echo "Installing requirements"
+sudo python3 -m pip install -r requirements.txt
+ 
+echo "Dependencies installed successfully"
+ 
